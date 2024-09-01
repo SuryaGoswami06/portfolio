@@ -7,8 +7,8 @@ function Project(){
     const [error,setError]=useState('');
 
     useEffect(()=>{
-        import('../content/project/project.json')
-        .then(res=>res.default)
+        fetch('/content/project/project.json')
+        .then(res=>res.json())
         .then(data=>setMainProject(data))
         .catch(err=>setError(err))
     },[])

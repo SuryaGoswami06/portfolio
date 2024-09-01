@@ -5,6 +5,7 @@ import NotFound from './pages/NotFound'
 import MainLayout from './layout/MainLayout'
 import Project from './pages/Project'
 import Blog from './pages/Blog'
+import Article from './components/Article'
 
 function AppRoutes() {
   return (
@@ -14,6 +15,7 @@ function AppRoutes() {
                 <Route index element={<Hero/>}  />
                 <Route path='project' element={<Project/>}/>
                 <Route path='blog' element={<Blog/>}/>
+                <Route path='blog/:slug' element={<Article/>} />
                 <Route path='*' element={<NotFound/>}/>
            </Route>
         </Routes>
