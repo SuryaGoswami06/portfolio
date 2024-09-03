@@ -112,7 +112,7 @@ function Hero() {
          <h2 className='font-bold uppercase text-lg'>cv</h2>
           <p className='text-sm mt-1'>download my resume by clicking on the button below</p>
           <Button variant='ghost' className='bg-btnBgColor text-white hover:bg-btnBgHoverColor hover:text-white my-3 w-full'>
-            <span>download resume <img src={cv} alt="cv-icon" className='inline' /></span>
+            <span >download resume <img src={cv} alt="cv-icon" className='inline h-7 w-7' /></span>
           </Button>
         </div>
 
