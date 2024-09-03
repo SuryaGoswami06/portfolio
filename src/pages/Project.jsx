@@ -2,6 +2,7 @@ import React, { useEffect,useState } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Link } from 'react-router-dom';
 import BreadCrumb from '@/components/BreadCrumb';
+import ProjectCard from '@/components/ProjectCard';
 
 function Project(){
     const [mainProject,setMainProject]=useState('');
@@ -27,21 +28,14 @@ function Project(){
             {
               mainProject!==''?mainProject.map((data)=>{
                     return (
-                        <div className='flex flex-col shadow-lg p-4 rounded-lg'>
-                             <div >
-                                <img className='w-full h-full object-cover' src={data.bannerImage} alt={data.bannerImageDescription} />
-                             </div>
-                             <h3 className='font-bold text-lg capitalize pt-1'>{data.title}</h3>
-                             <div className='flex flex-row uppercase'>
-                                <Link to={data.liveLink} className='mr-2 pr-2 border-r-2'>live</Link>
-                                <Link to={data.githubLink}>code</Link>
-                             </div>
-                             <p>
-                                {
-                                    data.description
-                                }
-                             </p>
-                        </div>
+                         <ProjectCard 
+                            bannerImage={data.bannerImage} 
+                            bannerImageDescription={data.bannerImageDescription}
+                            title={data.title}
+                            liveLink={data.liveLink}
+                            githubLink={data.githubLink}
+                            description={data.description}
+                         />
                     )
                 }):'something went wrong!!!'
             }
