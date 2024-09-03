@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Link } from 'react-router-dom';
+import BreadCrumb from '@/components/BreadCrumb';
 
 function Project(){
     const [mainProject,setMainProject]=useState('');
@@ -14,8 +15,9 @@ function Project(){
     },[])
 
     return(
-    <div className='max-w-[1024px] mx-auto'>
-      <Tabs defaultValue="main-project">
+    <div className='max-w-[1024px] mx-auto flex flex-col'>
+      <BreadCrumb currentRoot='project' />
+      <Tabs defaultValue="main-project" className='mt-3'>
         <TabsList>
             <TabsTrigger value="main-project">main project</TabsTrigger>
             <TabsTrigger value="practice-project">practice project</TabsTrigger>
