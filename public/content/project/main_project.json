@@ -1,0 +1,26 @@
+[
+    {
+        "bannerImage":"/images/ephemeral-chat.png",
+        "bannerImageDescription":"ephemeral-chat",
+        "title":"ephemeral chat using socket.io",
+        "liveLink":"https://ephemeralchat.coffeewithbugs.com/",
+        "githubLink":"https://github.com/SuryaGoswami06/quick-chat",
+        "description":"Experience the ultimate in private,secure and ephemeral chatting,No sign-ups, No downloads, just instant communication"
+    },
+    {
+        "bannerImage":"/images/how-to-make-sudoku-solver.png",
+        "bannerImageDescription":"sudoku-solver",
+        "title":"sudoku solver using backtracking",
+        "liveLink":"https://sudokusolver.coffeewithbugs.com/",
+        "githubLink":"https://github.com/SuryaGoswami06/sudoku-solver",
+        "description":"using this you can solve any sudoku problems , its the best one out there"
+    },
+    {
+        "bannerImage":"/images/quick-video.png",
+        "bannerImageDescription":"quick-video",
+        "title":"quick video call using webRTC",
+        "liveLink":"https://quickvideo.coffeewithbugs.com/",
+        "githubLink":"https://github.com/SuryaGoswami06/quick-video",
+        "description":"using this you can do quick video call at your local network"
+    }
+]

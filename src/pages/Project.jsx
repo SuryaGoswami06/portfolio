@@ -6,14 +6,22 @@ import ProjectCard from '@/components/ProjectCard';
 
 function Project(){
     const [mainProject,setMainProject]=useState('');
+    const [practiceProject,setPracticeProject]= useState('')
     const [error,setError]=useState('');
 
     useEffect(()=>{
-        fetch('/content/project/project.json')
+        fetch('/content/project/main_project.json')
         .then(res=>res.json())
         .then(data=>setMainProject(data))
         .catch(err=>setError(err))
     },[])
+
+    useEffect(()=>{
+      fetch('/content/project/practice_project.json')
+      .then(res=>res.json())
+      .then(data=>setPracticeProject(data))
+      .catch(err=>setError(err))
+  },[])
 
     return(
     <div className='max-w-[1024px] mx-auto flex flex-col'>
@@ -41,7 +49,24 @@ function Project(){
             }
         </div>
         </TabsContent>
-        <TabsContent value="practice-project">Change your password here.</TabsContent>
+        <TabsContent value="practice-project">
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-rows-1 gap-3'>
+              {
+                practiceProject!==''?practiceProject.map((data)=>{
+                      return (
+                          <ProjectCard 
+                              bannerImage={data.bannerImage} 
+                              bannerImageDescription={data.bannerImageDescription}
+                              title={data.title}
+                              liveLink={data.liveLink}
+                              githubLink={data.githubLink}
+                              description={data.description}
+                          />
+                      )
+                  }):'something went wrong!!!'
+              }
+          </div>
+        </TabsContent>
       </Tabs>
     </div>
     )

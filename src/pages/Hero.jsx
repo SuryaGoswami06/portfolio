@@ -32,15 +32,15 @@ function Hero() {
                 my skills to create efficient and user friendly solutions.
                </p>
                <div className='flex gap-1.5'>
-                   <Link className='bg-btnBgColor hover:bg-btnBgHoverColor rounded-lg p-2'>
+                   <Link to='https://github.com/SuryaGoswami06' className='bg-btnBgColor hover:bg-btnBgHoverColor rounded-lg p-2'>
                      <img src={github} alt="github" className='h-6 w-6' />
                    </Link>
-                   <Link className='bg-btnBgColor hover:bg-btnBgHoverColor rounded-lg p-2'>
+                   <Link to='https://www.linkedin.com/in/suryagoswami06/' className='bg-btnBgColor hover:bg-btnBgHoverColor rounded-lg p-2'>
                      <img src={linkedin} alt="linkedin" className='h-6 w-6' />
                    </Link>
-                   <Link className='bg-btnBgColor hover:bg-btnBgHoverColor rounded-lg p-2'>
+                   <a href="mailto:suryakantgoswami063@gmail.com" target='_blank' className='bg-btnBgColor hover:bg-btnBgHoverColor rounded-lg p-2'>
                      <img src={gmail} alt="gmail" className='h-6 w-6' />
-                   </Link>
+                   </a>
                </div>
            </div>
            <div className='p-3 sm:block hidden'>
@@ -63,7 +63,7 @@ function Hero() {
               <li>MERN stack (mongoDB,Express,React,Node)</li>
               <li>RESTful APIs</li>
               <li>Responsive Web Design</li>
-              <li>auth0,stripe,axios</li>
+              <li>auth0,jwt,session,axios</li>
               <li>tailwind css,shadcn</li>
             </ul>
             <h3 className='font-bold pt-2'>version control & tools</h3>

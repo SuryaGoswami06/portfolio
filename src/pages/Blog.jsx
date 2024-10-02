@@ -9,12 +9,6 @@ function Blog() {
       slug:"how-to-make-sudoku-solver",
       title:"how to made sudoku solver using js",
       description:"Learn how to create a powerful Sudoku solver using Python and backtracking algorithms. This comprehensive tutorial walks you through the coding process step-by-step, helping you understand the logic behind solving Sudoku puzzles efficiently. Perfect for beginners and experienced programmers alike!"
-    },
-    {
-      id:2,
-      slug:"how-to-create-snake-game",
-      title:"Create a Classic Snake Game in Python: A Fun and Easy Tutorial for Beginners",
-      description:"Discover how to build the classic Snake game using Python and Pygame. Follow our easy-to-understand guide to learn game development basics, from setting up the environment to coding the snake's movement and growing mechanics. Ideal for those new to programming and game design!"
     }
   ]
   return (
@@ -25,7 +19,7 @@ function Blog() {
          </div>
          <div className='flex flex-col gap-5'>
            {
-            allBlogs.map((item)=>(
+            allBlogs?.map((item)=>(
               <Link to={`/blog/${item.slug}`} className='group' key={item.id}>
               <div className='flex justify-between my-1 font-fontHeader text-xl decoration-3 group-hover:underline group-hover:decoration-dotted'>
                   <h2 className='font-semibold capitalize '>{item.title}</h2>
