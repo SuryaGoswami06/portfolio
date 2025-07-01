@@ -6,7 +6,7 @@ import Projects from './pages/projects'
 
 function AppRoutes() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/portfolio'>
       <Routes>
         <Route path='/' element={<Layout/>}>
             <Route index element={<App/>} />
